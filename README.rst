@@ -2,7 +2,7 @@
 
 It's a fork of `mgaitan/waliki`_  project
 
-.. mgaitan/waliki:: https://github.com/mgaitan/waliki/
+.. _mgaitan/waliki: https://github.com/mgaitan/waliki/
 
 Setup
 ----------------
@@ -10,9 +10,8 @@ Setup
 .. code-block:: bash
 
     pip install -r requirements.txt
-
-Start
------------------
+    mkdir content
+    cp config.py.template content/config.py
 
 Modify gunicorn.py to set the ip address.
 
@@ -21,4 +20,12 @@ Modify gunicorn.py to set the ip address.
     import os
 
     bind = "192.168.1.27:8000"
+
+Start
+-----------------
+
+.. code-block:: bash
+
+    gunicorn -c gunicorn.py app:app
+
 
