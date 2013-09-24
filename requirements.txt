@@ -15,3 +15,4 @@ docutils==0.10         # for restructuredtext markup
 rst2html5
 GitPython==0.3.2.RC1   # for git plugin
 rst2pdf          # for pdf plugin
+flask-uploads
