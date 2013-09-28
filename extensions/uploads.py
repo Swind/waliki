@@ -23,7 +23,6 @@ media = UploadSet('media', ALL, default_dest=default_dest)
 
 uploads = Blueprint('uploads',  __name__, template_folder='templates')
 
-
 def extra_actions(page, **extra):
     context = extra['extra_context']
     actions = context.get('extra_actions', [])

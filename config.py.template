@@ -3,4 +3,4 @@ SECRET_KEY='afasdiufhfkhasdnfklhjfgnbdxasdf'
 TITLE='Waliki demo'
 #PRIVATE=True
 MARKUP='restructuredtext'  # 'markdown'
-EXTENSIONS = ['Git', 'rst2pdf', 'uploads']
+EXTENSIONS = ['Git', 'rst2pdf', 'uploads', 'pygments_style']

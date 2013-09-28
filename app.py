@@ -8,7 +8,6 @@ import markdown
 import docutils.core
 import docutils.io
 import json
-import extensions.rst_directive
 
 from rst2html5 import HTML5Writer
 from functools import wraps
