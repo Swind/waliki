@@ -9,7 +9,6 @@ import docutils.core
 import docutils.io
 import json
 
-from rst2html5 import HTML5Writer
 from functools import wraps
 from flask import (Flask, render_template, flash, redirect, url_for, request,
                    abort)
@@ -169,12 +168,9 @@ class RestructuredText(Markup):
                   source_class=docutils.io.StringInput,
                   destination_path=None, reader=None, reader_name='standalone',
                   parser=None, parser_name='restructuredtext', writer=None,
-                  writer_name=None, settings=None, settings_spec=None,
+                  writer_name='html', settings=None, settings_spec=None,
                   settings_overrides=None, config_section=None,
                   enable_exit_status=None):
-
-        if not writer:
-            writer = HTML5Writer()
 
         # Taken from Nikola
         # http://bit.ly/14CmQyh

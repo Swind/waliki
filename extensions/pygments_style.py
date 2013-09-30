@@ -51,11 +51,11 @@ class Pygments(Directive):
 
     # Add name -> formatter pairs for every variant you want to use
     VARIANTS = {
-            #    'linenos': HtmlFormatter(linenos=True, cssclass="highlight"),
+            'linenos': HtmlFormatter(linenos=True, cssclass="highlight"),
     }
 
-    required_arguments = 1
-    optional_arguments = 0
+    required_arguments = 0
+    optional_arguments = 1
     final_argument_whitespace = True
     option_spec = dict([(key, directives.flag) for key in VARIANTS])
     has_content = True
@@ -64,7 +64,10 @@ class Pygments(Directive):
         self.assert_has_content()
 
         try:
-            lexer = get_lexer_by_name(self.arguments[0])
+            if len(self.arguments) != 0:
+                lexer = get_lexer_by_name(self.arguments[0])
+            else:
+                lexer = TextLexer()
         except ValueError:
             # no lexer found - use the text one instead of an exception
             lexer = TextLexer()
