@@ -4,3 +4,4 @@ TITLE='Waliki demo'
 #PRIVATE=True
 MARKUP='restructuredtext'  # 'markdown'
 EXTENSIONS = ['Git', 'rst2pdf', 'uploads', 'pygments_style']
+PYGMENTS_THEME = "zenburn"

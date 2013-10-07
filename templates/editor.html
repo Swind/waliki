@@ -181,7 +181,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
     }
 });
 
-var theme = '{{ config.THEME }}';
+var theme = '{{ config.EDITOR_THEME }}';
 editor.setOption("theme", theme);
 
 var markLang = '{{ markup.NAME }}';
